@@ -1,0 +1,55 @@
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using TravelApp.Domain.Entities;
+using TravelApp.Persistence.Contexts;
+
+namespace TravelApp.API.Controllers
+{
+    [Route("api/[controller]")]
+    [ApiController]
+    public class TourPackagesController : ControllerBase
+    {
+        private readonly TravelDbContext _context;
+
+        public TourPackagesController(TravelDbContext context)
+        {
+            _context = context;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return Ok(_context.TourPackages);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] TourPackage tourPackage)
+        {
+            await _context.TourPackages.AddAsync(tourPackage);
+            await _context.SaveChangesAsync();
+            return Ok(tourPackage);
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete([FromRoute] int id)
+        {
+            var tourPackage = await _context.TourPackages.SingleOrDefaultAsync(tp => tp.Id == id);
+            if (tourPackage == null)
+            {
+                return NotFound();
+            }
+            _context.TourPackages.Remove(tourPackage);
+            await _context.SaveChangesAsync();
+            return Ok(tourPackage);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update([FromRoute] int id, [FromBody] TourPackage tourPackage)
+        {
+            _context.Update(tourPackage);
+            await _context.SaveChangesAsync();
+            return Ok(tourPackage);
+        }
+    }
+}
