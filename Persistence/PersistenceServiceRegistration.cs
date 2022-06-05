@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TravelApp.Application.Common.Interfaces;
 using TravelApp.Persistence.Contexts;
 
 namespace TravelApp.Persistence
@@ -16,6 +17,8 @@ namespace TravelApp.Persistence
         {
             services.AddDbContext<TravelDbContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("ConnectionString")));
+
+            services.AddScoped<IApplicationDbContext>(provider => provider.GetService<TravelDbContext>());
 
             return services;
         }

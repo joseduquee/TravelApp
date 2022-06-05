@@ -11,15 +11,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{66B48B90-DA8C-4E7A-B984-A462F964D968}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.Domain", "Domain\TravelApp.Domain.csproj", "{BA7B771A-329A-4F7E-BAFE-79A94E352395}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.Domain", "Domain\TravelApp.Domain.csproj", "{BA7B771A-329A-4F7E-BAFE-79A94E352395}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.Application", "Application\TravelApp.Application.csproj", "{09B1EAA6-1002-48AC-8FEA-5CC9AC4E7094}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.Application", "Application\TravelApp.Application.csproj", "{09B1EAA6-1002-48AC-8FEA-5CC9AC4E7094}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.Persistence", "Persistence\TravelApp.Persistence.csproj", "{63828742-C562-42ED-BE5D-1C06A8E8AA5D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.Persistence", "Persistence\TravelApp.Persistence.csproj", "{63828742-C562-42ED-BE5D-1C06A8E8AA5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.Infrastructure", "Infrastructure\TravelApp.Infrastructure.csproj", "{F47EC56E-4EE8-4FF1-A7C7-3C88ACF98A1F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.Infrastructure", "Infrastructure\TravelApp.Infrastructure.csproj", "{F47EC56E-4EE8-4FF1-A7C7-3C88ACF98A1F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TravelApp.API", "API\TravelApp.API.csproj", "{4BB8990E-995E-46C0-8050-D3CA1F55AD7F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TravelApp.API", "API\TravelApp.API.csproj", "{4BB8990E-995E-46C0-8050-D3CA1F55AD7F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
